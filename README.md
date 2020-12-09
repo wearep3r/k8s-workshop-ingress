@@ -36,6 +36,20 @@ helm uninstall nginx-ingress
 
 > HINT: Use the `--dry-run` flag to see which releases will be uninstalled without actually uninstalling them.
 
+## hello world app
+
+### Deployment
+
+```bash
+kubectl apply -f helloword-deployment.yaml
+```
+
+### Ingress
+
+```bash
+kubectl apply -f helloword-ingres.yaml
+```
+
 ## cert-manager for SSL,TLS
 
 ### Add repository
