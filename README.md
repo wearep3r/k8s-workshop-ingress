@@ -49,7 +49,7 @@ kubectl apply -f helloworld-deployment.yaml
 ### Ingress
 
 ```bash
-kubectl apply -f helloworld-ingres.yaml
+kubectl apply -f helloworld-ingress.yaml
 ```
 
 ## cert-manager for SSL,TLS
