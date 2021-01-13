@@ -73,7 +73,19 @@ helm install \
 
 > NOTE: `--set installCRDs=true` installs **Custom Resource Definitions** into the Kubernetes cluster
 
+## Add TLS capabilitites
 
+1. Install cert-manager certificate issuer resource
+
+```bash
+kubectl create  -f letsencrypt-staging.yaml
+```
+
+2. Apply TLS config to deployment
+
+```bash
+kubectl apply -f helloworld-ingress-tls.yaml
+```
 ## Notes
 
 - Get available external IPs: `kubectl get svc -n kube-system`
