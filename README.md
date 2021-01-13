@@ -40,14 +40,16 @@ helm uninstall nginx-ingress
 
 ### Deployment
 
+The `Deployment` starts 3 replicas of our `helloworld` container in the default namespace of Kubernetes.
+
 ```bash
-kubectl apply -f helloword-deployment.yaml
+kubectl apply -f helloworld-deployment.yaml
 ```
 
 ### Ingress
 
 ```bash
-kubectl apply -f helloword-ingres.yaml
+kubectl apply -f helloworld-ingres.yaml
 ```
 
 ## cert-manager for SSL,TLS

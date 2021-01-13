@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: docker-hello-world-service
+spec:
+  selector:
+    app: docker-hello-world
+  ports:
+    - port: 8088
+      targetPort: 80
+  type: ClusterIP
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,15 +31,3 @@ spec:
         image: scottsbaldwin/docker-hello-world:latest
         ports:
         - containerPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: docker-hello-world-service
-spec:
-  selector:
-    app: docker-hello-world
-  ports:
-    - port: 8088
-      targetPort: 80
-  type: ClusterIP
